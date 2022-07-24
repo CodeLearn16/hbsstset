@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-l!5k-z@e8*alaihp(pw6#h*p@ga=arxnoz=n_!)ph=#g^s3)y)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['myapp.herokuapp.com']
+ALLOWED_HOSTS = ['hbsstest.herokuapp.com']
 
 
 # Application definition
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'hbsstest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql',
-        'NAME': 'ddgd4ifaeimlqv',
-        'USER': 'uhmkaqcbgyloes',
-        'PASSWORD': 'edebaa34bc7f97a4c03e1cc9ebcc34c1bac16899186eb833577e5c5cdde3588a',
-        'HOST': 'ec2-54-208-104-27.compute-1.amazonaws.com',
-        'POST': '5432',
+        'NAME': 'd8tv5t1agf7ugp',
+        'USER': 'tddauwulmdmqga',
+        'PASSWORD': '0f7767e3668436c41f14f25198f6db9832cb30c8b7780e5bdc4f9a48c5fd8e22',
+        'HOST': 'ec2-52-22-136-117.compute-1.amazonaws.com',
+        'POST': '5432', 
     }
 }
 
