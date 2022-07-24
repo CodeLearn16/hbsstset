@@ -1,0 +1,698 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Site Metas -->
+<title>H.B.S.S Inter College</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Site Icons -->
+<link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/x-icon" />
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
+<!-- Site CSS -->
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<!-- ALL VERSION CSS -->
+<link rel="stylesheet" href="{% static 'css/versions.css' %}">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+<!-- Modernizer for Portfolio -->
+<script src="{% static 'js/modernizer.js' %}"></script>
+
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="host_version">
+
+<!-- Modal -->
+		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header tit-up">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Admin Login</h4>
+					</div>
+					<div class="modal-body customer-box">
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="Login">
+								<form role="form" class="form-horizontal">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input class="form-control" id="email1" placeholder="Email" type="emial">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input class="form-control" id="exampleInputPassword1" placeholder="Password" type="password">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-10">
+											<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+												Login
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Transfer Certificate -->
+		<div class="modal fade" id="TC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header tit-up">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Details</h4>
+					</div>
+					<div class="modal-body customer-box">
+						<!-- Tab panes -->
+
+						<div class="tab-content">
+							<div class="tab-pane active" id="TC">
+								<form role="form" class="form-horizontal">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input class="form-control" id="TC" placeholder="S.R No." type="number">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input class="form-control" id="DOB" placeholder="DOB" type="password">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-10">
+											<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+												Submit
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Student_data-->
+
+		<div class="modal fade" id="Student_data" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header tit-up">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Details</h4>
+					</div>
+					<div class="modal-body customer-box">
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="Student_data">
+								<form role="form" class="form-horizontal">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input class="form-control" id="SR" placeholder="SR No." type="number">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input class="form-control" id="DOB" placeholder="Date of Birth" type="password">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-10">
+											<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+												Submit
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index">
+					<img src="{{baseUrl}}/logo1.png" alt="" width="40%" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="index">Home</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Admission</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="ad_process">Admission Procedure</a>
+								<a class="dropdown-item" href="admission">Online Admission Form</a>
+								<a class="dropdown-item" href="#">Fee Structure</a>
+							</div>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="download" id="dropdown-a" data-toggle="dropdown">Downloads</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#TC">TC</a>
+								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#Student_data">Student Data</a>
+
+							</div>
+						</li>
+
+						<li class="nav-item"><a class="nav-link" href="testimonials">Testimonial</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">About</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="about">About School</a>
+								<a class="dropdown-item" href="teachers">Teachers</a>
+								<a class="dropdown-item" href="gallery">Gallery</a>
+								<a class="dropdown-item" href="about#mission-vision">Our Vision & Mission</a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Admin</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url('{{baseUrl}}/pl3.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>H.B.S.S </strong> Inter College, Jamalipur Jasrana Firozabad</h2>
+										<p class="lead">Nursery to 12<sup>th</sup> Classes are available.</p>
+										<a href="contact" class="hover-btn-new"><span>Contact Us</span></a>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="about" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('{{baseUrl}}/pl7.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>H.B.S.S </strong> Inter College, Jamalipur Jasrana Firozabad</strong></h2>
+										<p class="lead" data-animation="animated fadeInLeft">Nursery to 12<sup>th</sup> Classes are available. </p>
+										<a href="contact" class="hover-btn-new"><span>Contact Us</span></a>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="about" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('{{baseUrl}}/pl16.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>Nursery</strong> to <strong>12<sup>th</sup> Class</strong></h2>
+										<p class="lead" data-animation="animated fadeInLeft">Affiliated to Madhyamik Sikhksha Parishad, Uttar Pradesh Prayagraj</p>
+										<a href="contact" class="hover-btn-new"><span>Contact Us</span></a>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="about" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	<!-- notice -->
+
+	<section id="news">
+		<div class="container">
+			<div class="container text-center mb-5">
+				<h2 class="section-title">Notice Board</h2>
+				<p class="section-description">Stay updated with all that&#39;s happening in the school.</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="ideaboxTimeline" id="i-timeline">
+				<div class="it-spine"></div>
+				<div class="it-box it-left">
+					<div class="it-content">
+						<h3>Shiv Ratri Holiday</h3>
+						<p>All Students are informed that on 1st march, Tuesday will be holiday on account of Maha Shiv Ratri.</p>
+						<div class="it-infobar">
+							<em>27 Feb 2022, Sunday</em>
+						</div>
+					</div>
+					<div class="it-iconbox">
+						<span></span>
+					</div>
+				</div>
+				<div class="it-box it-right">
+					<div class="it-content">
+						<h3>Makar Sankranti Holiday</h3>
+						<p>All Students are informed that on 14th Jan, Friday will be holiday on account of Makar Sankranti.</p>
+						<div class="it-infobar">
+							<em>12 Jan 2022, Wednesday</em>
+						</div>
+					</div>
+					<div class="it-iconbox">
+						<span></span>
+					</div>
+				</div>
+				
+				
+				<div class="it-minibox pb-5"><a href="notice">View All</a></div>
+			</div>
+		</div>
+	</section>
+	<section id="featured-link">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 col-12">
+					<h2 class="title">Admission Open</h2>
+					<p class="description">We are inviting applications for the session 2022-23, get registered now!</p>
+				</div>
+				<div class="col-lg-6 col-md-6 text-right">
+					<a href="admission" class="btn main-btn">Apply Now</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div id="overviews" class="section wb">
+		<div class="container">
+			<div class="section-title row text-center">
+				<div class="col-md-8 offset-md-2">
+					<h3>About</h3>
+					<p class="lead">Education Institute affiliated with Madhyamik Sikhksha Parishad, Uttar Pradesh Prayagraj.</p>
+				</div>
+			</div><!-- end title -->
+
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+					<div class="message-box">
+						<h4>BEST education school</h4>
+						<h2>Welcome to H.B.S.S INTER COLLEGE</h2>
+						<p>
+							Established in year 1999, it is located in Rural area of Uttar Pradesh state of India.
+							In village Jamalipur area of tehsil Jasrana block of Firozabad district.<br> Area Pincode - 283136. <br>
+							School is providing Primary level to intermediate (Nursery - 12) education and is being managed by Department of Education. <br>
+							Medium of instruction is Hindi language. School is affiliated with  Madhyamik Sikhksha Parishad, Uttar Pradesh Prayagraj.<br><br>
+						</p>
+						<a href="about" class="hover-btn-new orange"><span>Learn More</span></a>
+					</div><!-- end messagebox -->
+				</div><!-- end col -->
+
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+					<div class="post-media wow fadeIn">
+						<img src="{{baseUrl}}/pd.jpg" alt="" height="440px">
+					</div><!-- end media -->
+				</div><!-- end col -->
+			</div>
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+	<section class="section lb page-section">
+		<div class="container">
+			<div class="section-title row text-center">
+				<div class="col-md-8 offset-md-2">
+					<h3>Our history</h3>
+					<p class="lead"></p>
+				</div>
+			</div><!-- end title -->
+			<div class="timeline">
+				<div class="timeline__wrap">
+					<div class="timeline__items">
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>Present</h2>
+								<p>Successfully completed Twenty-Two years.<br><br><br><br></p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>2005</h2>
+								<p>Intermediate, recognised by Madhyamik Sikhksha Parishad, Uttar Pradesh Prayagraj.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>2003</h2>
+								<p>HighSchool,  recognised by Madhyamik Sikhksha Parishad, Uttar Pradesh Prayagraj</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>1999</h2>
+								<p>Established in 30 June, 1999.<br>Inaugurated by Ashok Yadav.<br><br><br></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<div class="section cl">
+		<div class="container">
+			<div class="row text-left stat-wrap">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-study"></i></span>
+					<p class="stat_count">600</p>
+					<h3>Students</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-online"></i></span>
+					<p class="stat_count">17</p>
+					<h3>Subjects</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-years"></i></span>
+					<p class="stat_count">22</p>
+					<h3>Years Completed</h3>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+	<div id="plan" class="section lb">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Facilities Provided By College</h3>
+				<p>..................</p>
+			</div><!-- end title -->
+
+
+			<hr class="invis">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="tab-content">
+						<div class="tab-pane active fade show" id="tab1">
+							<div class="row text-center">
+								<div class="col-md-4">
+									<div class="pricing-table pricing-table-highlighted">
+										<div class="pricing-table-header grd1">
+											<h2>CCTV </h2>
+											<h3>Full campus surveillance</h3>
+										</div>
+										<img src="{{baseUrl}}/cctv.jpg" width="99%" height="210px">
+									</div>
+								</div>
+								
+
+								<div class="col-md-4">
+									<div class="pricing-table pricing-table-highlighted">
+										<div class="pricing-table-header grd1">
+											<h2>Transport</h2>
+											<h3>Vehicle facility available</h3>
+										</div>
+										<img src="{{baseUrl}}/bus.png" width="99%" height="210px">
+										
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="pricing-table pricing-table-highlighted">
+										<div class="pricing-table-header grd1">
+											<h2>Laboratory</h2>
+											<h3>Learn good things</h3>
+										</div>
+										<img src="{{baseUrl}}/lab.jpg" width="99%" height=" 210px">
+									</div>
+								</div>
+							</div><!-- end row -->
+						</div><!-- end pane -->
+					</div><!-- end content -->
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+	<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('{{baseUrl}}/parallax_04.jpg');">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Testimonials</h3>
+				<a href="testimonials"><p  style="color:white;">Some testimonials are...<i class="fa fa-hand-pointer-o"></i></p></a>
+                </div><!-- end title -->
+
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="testi-carousel owl-carousel owl-theme">
+						<div class="testimonial clearfix">
+							<div class="testi-meta">
+								<img src="{{baseUrl}}/abhishek.png" alt="" class="img-fluid">
+								<h4>Abhishek Kumar </h4>
+							</div>
+							<div class="desc">
+								<h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+								<p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+							</div>
+							<!-- end testi-meta -->
+						</div>
+						<!-- end testimonial -->
+
+						<div class="testimonial clearfix">
+							<div class="testi-meta">
+								<img src="{{baseUrl}}/muskan.png" alt="" class="img-fluid">
+								<h4>Anshika Sharma </h4>
+							</div>
+							<div class="desc">
+								<h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+								<p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+							</div>
+							<!-- end testi-meta -->
+						</div>
+						<!-- end testimonial -->
+						<!-- end testimonial -->
+					</div><!-- end carousel -->
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+
+<!-- Gallery -->
+
+	<div id="plan" class="section lb">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Gallery</h3>
+				<a href="gallery"><p  style="color:black;">For more Beautiful views of us...<i class="fa fa-hand-pointer-o"></i></p></a>
+			</div><!-- end title -->
+
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-12"><!-- col-12 -->
+					<div class="tab-content">
+						<div class="tab-pane active fade show" id="tab1">
+							<div class="row text-center">
+								<div class="col-md-4">
+									<div class="pricing-table pricing-table-highlighted">
+										<img src="{{baseUrl}}/pl5.jpg" width="99%" height="210px">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="pricing-table pricing-table-highlighted">
+										<img src="{{baseUrl}}/pl6.jpg" width="99%" height="210px">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="pricing-table pricing-table-highlighted">
+										<img src="{{baseUrl}}/pl8.jpg" width="99%" height="210px">
+									</div>
+									</div>
+									</div><!-- end row -->
+									<p> </p>
+									<div class="row text-center">
+										<div class="col-md-4">
+											<div class="pricing-table pricing-table-highlighted">
+												<img src="{{baseUrl}}/pl9.jpg" width="99%" height="210px">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="pricing-table pricing-table-highlighted">
+												<img src="{{baseUrl}}/pl12.jpg" width="99%" height="210px">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="pricing-table pricing-table-highlighted">
+												<img src="{{baseUrl}}/pl14.jpg" width="99%" height="210px">
+											</div>
+											</div>
+											</div><!-- end row -->
+											
+					</div><!-- end pane -->
+				</div><!-- end content -->
+			</div><!-- end col -->
+		</div><!-- end row -->
+	</div><!-- end container -->
+	
+	</div><!-- end section -->
+
+	<div id="contact" class="section wb">
+	<div class="container">
+	<div class="col-xl-6 col-md-12 col-sm-12">
+		<div class="map-box">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d270014.5590469534!2d78.51016224363535!3d27.241609154620058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39744dbc19b48853%3A0xac7f6f2df932c397!2sH%20B%20S%20S%20INTER%20COLLEGE!5e0!3m2!1sen!2sin!4v1658417317164!5m2!1sen!2sin"
+			title="H.B.S.S. Inter College Jamalipur" aria-label="H.B.S.S. Inter College Jamalipur" 
+			width="1100" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+	</div></div>
+
+
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-xs-12">
+					<div class="widget clearfix">
+						<div class="widget-title">
+							<h3>About US</h3>
+						</div>
+						<p>Established in year 1999, it is located in Rural area of Uttar Pradesh state of India. In VILL Jamalipur area of tehsil Jasrana block of Firozabad district. Area pincode is 283136. School is providing Primary level to intermediate (Nursery - 12) education and is being managed by Department of Education. Medium of instruction is Hindi language. School is affiliated with  Madhyamik Sikhksha Parishad, Uttar Pradesh Prayagraj.</p>
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://maps.google.com/?cid=12429775739810923415&entry=gps"><i class="fa fa-map-marker"></i></a></li>
+							</ul><!-- end links -->
+						</div>
+					</div><!-- end clearfix -->
+				</div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+					<div class="widget clearfix">
+						<div class="widget-title">
+							<h3>Information Link</h3>
+						</div>
+						<ul class="footer-links">
+							<li><a href="index">Home</a></li>
+							<li><a href="ad_process">Admission</a></li>
+							<li><a href="testimonials">Testimonials</a></li>
+							<li><a href="teachers">Teachers</a></li>
+							<li><a href="about">About Us</a></li>
+							<li><a href="contact">Contact</a></li>
+						</ul><!-- end links -->
+					</div><!-- end clearfix -->
+				</div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+					<div class="widget clearfix">
+						<div class="widget-title">
+							<h3>Contact Details</h3>
+						</div>
+
+						<ul class="footer-links">
+							<li><a href="mailto:#">hbssint@gmail.com</a></li>
+							<li><a href="http://hbssintc.com">hbssintc.com</a></li>
+							<li>Jamalipur Jasrana, Firozabad Uttar Pradesh - 283136</li>
+							<li>+91 9675889000</li>
+						</ul><!-- end links -->
+					</div><!-- end clearfix -->
+				</div><!-- end col -->
+
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</footer><!-- end footer -->
+
+	<div class="copyrights">
+		<div class="container">
+			<div class="footer-distributed">
+				<div class="footer-center">
+					<p class="footer-company-name">All Rights Reserved. &copy; 2022  Designed by: <a href="#">CodeLearn</a></a></p>
+				</div>
+			</div>
+		</div><!-- end container -->
+	</div><!-- end copyrights -->
+
+	<a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+	  <!-- ALL JS FILES -->
+	  <script src="{% static 'js/all.js' %}"></script>
+	  <!-- ALL PLUGINS -->
+	  <script src="{% static 'js/custom.js' %}"></script>
+	  <script src="{% static 'js/timeline.min.js' %}"></script>
+	  <script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+  </body>
+  </html>
