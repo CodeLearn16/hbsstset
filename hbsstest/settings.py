@@ -56,7 +56,7 @@ ROOT_URLCONF = 'hbsstest.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'hbsstest.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':'django.db.backends.postgressql_psycopg2',
+        'ENGINE':'django.db.backends.postgresql',
         'NAME': 'ddgd4ifaeimlqv',
         'USER': 'uhmkaqcbgyloes',
         'PASSWORD': 'edebaa34bc7f97a4c03e1cc9ebcc34c1bac16899186eb833577e5c5cdde3588a',
@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static"
-django_heroku.settings(locals())
+django_heroku.settings(locals()) 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
